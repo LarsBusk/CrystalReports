@@ -1,0 +1,8 @@
+0	Keep current adjustment
+1	Slope and intercept adjustment
+2	Intercept adjustment (keep current slope)
+3	Intercept only, reset slope to 1
+4	Slope only, keep existing intercept
+5	Slope only, reset intercept to 0
+6	Reset slope to 1 and intercept to 0
+7	Manual slope/intercept adjustment

@@ -2,34 +2,31 @@ With Inst as
 (
 Select Distinct	ins.Name [InstrumentName]
 			,	ins.SerialNumber
+			,	nw.Name as NetWorkName
+			,	ig.Name as InstrumentGroupName
 From			tblMfCdSample sa
 Inner Join		tblMfCdInstrument ins on
 				sa.InstrumentLogicalId = ins.InstrumentLogicalID
+Inner Join		tblMfCdInstrumentGroup ig on
+				ins.InstrumentGroupLogicalID = ig.InstrumentGroupLogicalID
+Inner Join		tblMfCdNetwork nw on
+				nw.NetworkID = ig.NetworkID
 Where			ins.Obsolete = 0 and	
+				ig.Obsolete = 0 and
 				sa.SampleID In ({?SampleID})
 )
-Select			*
+Select			Inst.InstrumentName
+			,	SerialNumber
+			,	NetWorkName
+			,	InstrumentGroupName
+			,	CalData.parameterlogicalid
+			,	CalData.PredictionModelLogicalID
 From			Inst
 Left Join
 (
-Select			instrumentname as IName
-			,	productname
-			,	analysisstartutc
-			,	numberofdecimals
-			,	rsd.unit
-			,	parametershortname
-			,	rsd.parameterlogicalid
-			,	doubleresult
-			,	referencevalue
-			,	referencevalue - doubleresult [difference]
-			,	sampleid
-			,	pm.Name [PmName]
+Select			rsd.parameterlogicalid	
 			,	pm.PredictionModelLogicalID
-			,	0.7 [UpperError]
-			,	-0.7 [LowerError]
-			,	0.3 [UpperWarning]
-			,	-0.3 [LowerWarning]
-		--	,	*
+			,	rsd.instrumentname
 From			vwMnmRepSampleDetail rsd 
 Inner Join		tblMfCdParameter pa on
 				rsd.parameterlogicalid = pa.ParameterLogicalID
@@ -45,4 +42,4 @@ Where			sampletype = 'Quality Control'
 		and		parentsubsampleid IS NULL
 		and		rsd.sampleID in ({?SampleID})
 		) as CalData on
-		CalData.IName = inst.InstrumentName
+		CalData.instrumentname = Inst.InstrumentName

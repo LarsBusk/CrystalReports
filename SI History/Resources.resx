@@ -1,0 +1,551 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BaseZeroUsed" xml:space="preserve">
+    <value>Zero accepted against</value>
+  </data>
+  <data name="BaseZeroUsedCurrent" xml:space="preserve">
+    <value>Last accepted zero setting</value>
+  </data>
+  <data name="BaseZeroUsedFirstStep" xml:space="preserve">
+    <value>Most recent zero setting</value>
+  </data>
+  <data name="CarryOverBlankSampleUserInputRequestMessage" xml:space="preserve">
+    <value>Change water (blank) to sample</value>
+  </data>
+  <data name="CarryOverSampleBlankUserInputRequestMessage" xml:space="preserve">
+    <value>Change sample to water (blank)</value>
+  </data>
+  <data name="IcdUserInputRequestMessage" xml:space="preserve">
+    <value>The instrument check sample definition will be based on multiple replicates. Make sure that sample volume is sufficient. Press Start when ready</value>
+  </data>
+  <data name="DescaleCompletedHeader" xml:space="preserve">
+    <value>Descaling completed</value>
+  </data>
+  <data name="DescaleCompletedMessage" xml:space="preserve">
+    <value>Remove the descaling liquid from the pipette.
+
+    Then perform a zero setting.</value>
+  </data>
+  <data name="DescaleRequiredHeader" xml:space="preserve">
+    <value>Descaling needed</value>
+  </data>
+  <data name="DescaleRequiredMessage" xml:space="preserve">
+    <value>The system has detected limestone build-up. Descaling is recommended for optimum performance.
+
+    Press OK perform descaling. Press Cancel to postpone descaling. However, note that every sample measured after cancelling descaling will have a descaling warning attached.</value>
+  </data>
+  <data name="ManualDilutionHeader" xml:space="preserve">
+    <value>Dilution</value>
+  </data>
+  <data name="ManualDilutionMessage" xml:space="preserve">
+    <value>Input the sample weight and the sample + diluent weight or the dilution factor directly. Make sure that the diluted sample is homogeneous and place the sample under the pipette. Press Start when ready.</value>
+  </data>
+  <data name="DilutionFactor" xml:space="preserve">
+    <value>Dilution factor</value>
+  </data>
+  <data name="SampleWeight" xml:space="preserve">
+    <value>Sample weight</value>
+  </data>
+  <data name="AutoZeroCleanMinutes" xml:space="preserve">
+    <value>{0} min</value>
+  </data>
+  <data name="AutoZeroCleanTimeoutLessThan30Seconds" xml:space="preserve">
+    <value>&lt; 30 sec</value>
+  </data>
+  <data name="SerialNumberIsNotDefinedMessage" xml:space="preserve">
+    <value>The serial number of the instrument has never been set before. Provide the serial number of the instrument you would like to connect to.</value>
+  </data>
+  <data name="SerialNumberIsNotDefinedHeader" xml:space="preserve">
+    <value>The serial number is unknown</value>
+  </data>
+  <data name="NoInstrumentCheckDefinitionHeader" xml:space="preserve">
+    <value>Instrument check sample definition does not exist</value>
+  </data>
+  <data name="NoInstrumentCheckDefinitionMessage" xml:space="preserve">
+    <value>An instrument check sample definition has to be defined before an instrument check sample can be measured. Perform an instrument check sample definition.</value>
+  </data>
+  <data name="Clean" xml:space="preserve">
+    <value>Clean</value>
+  </data>
+  <data name="NotClean" xml:space="preserve">
+    <value>Clean</value>
+  </data>
+  <data name="CleanRunning" xml:space="preserve">
+    <value>Clean</value>
+  </data>
+  <data name="Zero" xml:space="preserve">
+    <value>Zero</value>
+  </data>
+  <data name="ZeroOverdue" xml:space="preserve">
+    <value>Overdue</value>
+  </data>
+  <data name="ZeroRunning" xml:space="preserve">
+    <value>Zero</value>
+  </data>
+  <data name="CleanWarningStatus" xml:space="preserve">
+    <value>Liquid level is low</value>
+  </data>
+  <data name="ZeroWarningStatus" xml:space="preserve">
+    <value>Liquid level is low</value>
+  </data>
+  <data name="RepredictionIncorrectNumberOfReplicates" xml:space="preserve">
+    <value>The number of replicates in the original sample is not equal to the number of replicates in the new repredicted sample.</value>
+  </data>
+  <data name="RepredictionPredictionIssue" xml:space="preserve">
+    <value>Issues with the prediction were found during reprediction.</value>
+  </data>
+  <data name="RepredictionMissingAbsorbance" xml:space="preserve">
+    <value>Some replicates do not have an absorbance spectrum and cannot be repredicted.</value>
+  </data>
+  <data name="RepredictionSampleNotFound" xml:space="preserve">
+    <value>Sample could not be added to the sample set as it could not be found in the database. This might be due to some internal error.</value>
+  </data>
+  <data name="RepredictionSampleNotLocal" xml:space="preserve">
+    <value>Local sample was repredicted with a network product, so it will not be added to the local sample set. It is still available in the results view.</value>
+  </data>
+  <data name="RepredictionUdfMismatch" xml:space="preserve">
+    <value>Sample registration fields in the original sample do not match the sample registration fields in the product used for reprediction.</value>
+  </data>
+  <data name="RepredictionDilutionValuesNeeded" xml:space="preserve">
+    <value>Original sample was measured without dilution, while new product has dilution enabled.</value>
+  </data>
+  <data name="ServiceModeMinitouchUserInputRequestMessage" xml:space="preserve">
+    <value>The instrument display cannot be operated when the instrument is in service mode.</value>
+  </data>
+  <data name="FlowSystem_Label_HeatedPipette" xml:space="preserve">
+    <value>Heated pipette</value>
+  </data>
+  <data name="FlowSystem_Label_BackPressure" xml:space="preserve">
+    <value>Back pressure valve</value>
+  </data>
+  <data name="FlowSystem_Label_Clean" xml:space="preserve">
+    <value>Clean</value>
+  </data>
+  <data name="FlowSystem_Label_ConductivitySensor" xml:space="preserve">
+    <value>Conductivity sensor</value>
+  </data>
+  <data name="FlowSystem_Label_Cuvette" xml:space="preserve">
+    <value>Cuvette</value>
+  </data>
+  <data name="FlowSystem_Label_CuvetteManifold" xml:space="preserve">
+    <value>Cuvette manifold</value>
+  </data>
+  <data name="FlowSystem_Label_Heater" xml:space="preserve">
+    <value>Heater</value>
+  </data>
+  <data name="FlowSystem_Label_HStage" xml:space="preserve">
+    <value>Low pressure H-stage</value>
+  </data>
+  <data name="FlowSystem_Label_InlineFilter" xml:space="preserve">
+    <value>Inline filter</value>
+  </data>
+  <data name="FlowSystem_Label_PressureSensor" xml:space="preserve">
+    <value>Pressure sensor</value>
+  </data>
+  <data name="FlowSystem_Label_Pump1Manifold" xml:space="preserve">
+    <value>Pump 1 / manifold</value>
+  </data>
+  <data name="FlowSystem_Label_Pump2Manifold" xml:space="preserve">
+    <value>Pump 2 / manifold</value>
+  </data>
+  <data name="FlowSystem_Label_Sample" xml:space="preserve">
+    <value>Sample</value>
+  </data>
+  <data name="FlowSystem_Label_WasteFunnel" xml:space="preserve">
+    <value>Waste funnel</value>
+  </data>
+  <data name="FlowSystem_Label_Zero" xml:space="preserve">
+    <value>Zero</value>
+  </data>
+  <data name="RepredictionMissingSample" xml:space="preserve">
+    <value>Unable to load original sample. It may have been deleted from the database.</value>
+  </data>
+  <data name="RepredictionNotSupportedSampleType" xml:space="preserve">
+    <value>Samples with this sample type cannot be repredicted.</value>
+  </data>
+  <data name="RepredictionInternalError" xml:space="preserve">
+    <value>Internal error during reprediction of the sample</value>
+  </data>
+  <data name="RepredictionSystemTimeAlteredError" xml:space="preserve">
+    <value>Reprediction cannot be carried out. System time is updated so the sample seems to be from the future</value>
+  </data>
+  <data name="RepredictionGlobalIssue" xml:space="preserve">
+    <value>Global</value>
+  </data>
+  <data name="LimsConfigurationCopy" xml:space="preserve">
+    <value>{0} (Copy)</value>
+  </data>
+  <data name="CarryOverUserInputRequestMessage" xml:space="preserve">
+    <value>You are about to start a carry-over test. 22 consecutive samples of water (blank) and sample will be measured.
+Make sure to have 12 cups of water (blank) and 10 cups of sample ready.
+The instrument will guide you when to change sample.
+
+Place the first cup with water (blank) under the pipette and press Start.</value>
+  </data>
+  <data name="RepeatabilityUserInputRequestMessage" xml:space="preserve">
+    <value>You are about start a repeatability test. Multiple measurements will be performed.
+Make sure that sample volume is sufficient.
+
+Place the sample under the pipette and press Start.</value>
+  </data>
+  <data name="GenericMinitouchUserInputRequestMessage" xml:space="preserve">
+    <value>Your attention is required on the PC</value>
+  </data>
+  <data name="BalanceOverloaded" xml:space="preserve">
+    <value>Balance is overloaded</value>
+  </data>
+  <data name="BalanceConnectionErrorOccured" xml:space="preserve">
+    <value>Cannot connect to the balance. 
+Check that the balance is connected, switched on and configured properly in the instrument settings.</value>
+  </data>
+  <data name="IcdUserInputRequestTitle" xml:space="preserve">
+    <value>You are about to perform an instrument check sample definition</value>
+  </data>
+  <data name="AutoCleanUserInputRequestTitle" xml:space="preserve">
+    <value>The instrument is not clean</value>
+  </data>
+  <data name="AutoZeroFailedUserInputRequestTitle" xml:space="preserve">
+    <value>Zero setting failed</value>
+  </data>
+  <data name="AutoZeroUserInputRequestTitle" xml:space="preserve">
+    <value>Zero setting needed</value>
+  </data>
+  <data name="LimsCsvFileParam_MultipleFilesModeTitle" xml:space="preserve">
+    <value>Multiple files mode</value>
+  </data>
+  <data name="LimsCsvFileParam_OutputPathHint" xml:space="preserve">
+    <value>Path to the output file</value>
+  </data>
+  <data name="LimsCsvFileParam_OutputPathTitle" xml:space="preserve">
+    <value>Output path</value>
+  </data>
+  <data name="LimsCsvFileParam_TemplateFilenameTitle" xml:space="preserve">
+    <value>Template filename</value>
+  </data>
+  <data name="LimsCsvFileTitle" xml:space="preserve">
+    <value>CSV-&gt;File</value>
+  </data>
+  <data name="SampleRegistrationUserInputRequestTitle" xml:space="preserve">
+    <value>Sample registration - {0}</value>
+  </data>
+  <data name="IDFCalculationExcludedSubsample" xml:space="preserve">
+    <value>This replicate has been excluded</value>
+  </data>
+  <data name="GoToDiagnosticsCenter" xml:space="preserve">
+    <value>Go to the Diagnostic centre to resolve this issue</value>
+  </data>
+  <data name="DiagnosticsIssueResolved" xml:space="preserve">
+    <value>Diagnostic event has been resolved</value>
+  </data>
+  <data name="BalanceConfigTestScaleHeader" xml:space="preserve">
+    <value>Balance connection test</value>
+  </data>
+  <data name="DiagnosticsIssue" xml:space="preserve">
+    <value>Diagnostic event occurred</value>
+  </data>
+  <data name="Diagnostics_Hint_General" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LimsCsvFileParam_OutputDelimiter" xml:space="preserve">
+    <value>Delimiter</value>
+  </data>
+  <data name="LimsCsvFileParam_OutputFileLocation" xml:space="preserve">
+    <value>File location</value>
+  </data>
+  <data name="LimsCsvFileParam_OutputFilePrefix" xml:space="preserve">
+    <value>Filename prefix</value>
+  </data>
+  <data name="RepredictedFromName" xml:space="preserve">
+    <value>Repredicted from</value>
+  </data>
+  <data name="RepredictionSubsampleRejectionSettingsMismatch" xml:space="preserve">
+    <value>Original sample was measured with different subsample rejection settings to the new product. Settings from the original product will be used.</value>
+  </data>
+  <data name="RepredictionIntakeSettingsMismatch" xml:space="preserve">
+    <value>Settings in the "Sample options" group of the original product are different to the settings of the reprediction product. Settings from the original product will be used.</value>
+  </data>
+  <data name="AutoZeroCleanSeconds" xml:space="preserve">
+    <value>{0} sec</value>
+  </data>
+  <data name="LimsExperiencedUnknownError" xml:space="preserve">
+    <value>Data Exchange has experienced an unknown error</value>
+  </data>
+  <data name="LimsConnectionError" xml:space="preserve">
+    <value>Data Exchange service is not responding...</value>
+  </data>
+  <data name="SlopeIntercept_History_ParameterNotAvailable" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="SlopeIntercept_History_ProductNotAvailable" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="SlopeIntercept_AdjustmentType_InterceptOnlyKeepSlope" xml:space="preserve">
+    <value>Intercept adjustment (keep current slope)</value>
+  </data>
+  <data name="SlopeIntercept_AdjustmentType_InterceptOnlyResetSlope" xml:space="preserve">
+    <value>Intercept only, reset slope to 1</value>
+  </data>
+  <data name="SlopeIntercept_AdjustmentType_KeepCurrent" xml:space="preserve">
+    <value>Keep current adjustment</value>
+  </data>
+  <data name="SlopeIntercept_AdjustmentType_ManualSlopeAndIntercept" xml:space="preserve">
+    <value>Manual slope/intercept adjustment</value>
+  </data>
+  <data name="SlopeIntercept_AdjustmentType_NoAdjustmentsMade" xml:space="preserve">
+    <value>No adjustment was performed</value>
+  </data>
+  <data name="SlopeIntercept_AdjustmentType_ResetSlopeAndIntercept" xml:space="preserve">
+    <value>Reset slope to 1 and intercept to 0</value>
+  </data>
+  <data name="SlopeIntercept_AdjustmentType_SlopeAndIntercept" xml:space="preserve">
+    <value>Slope and intercept adjustment</value>
+  </data>
+  <data name="SlopeIntercept_AdjustmentType_SlopeOnlyKeepIntercept" xml:space="preserve">
+    <value>Slope only, keep existing intercept</value>
+  </data>
+  <data name="SlopeIntercept_AdjustmentType_SlopeOnlyResetIntercept" xml:space="preserve">
+    <value>Slope only, reset intercept to 0</value>
+  </data>
+  <data name="SlopeIntercept_CalculationSummaryMessage_MorePointsRequired" xml:space="preserve">
+    <value>A minimum of {0} points are required to produce an adjustment recommendation</value>
+  </data>
+  <data name="SlopeIntercept_CalculationSummaryMessage_NoAdjustmentNeeded" xml:space="preserve">
+    <value>No adjustment needed - keep current slope/intercept</value>
+  </data>
+  <data name="SlopeIntercept_CalculationSummaryMessage_RemoveOutliers" xml:space="preserve">
+    <value>Remove potential outliers</value>
+  </data>
+  <data name="SlopeIntercept_CalculationSummaryMessage_UnableToRecommend" xml:space="preserve">
+    <value>Unable to recommend a particular adjustment type</value>
+  </data>
+  <data name="SlopeIntercept_RecommendationVsSelected_InsignificantInterceptOnlyKeepSlope" xml:space="preserve">
+    <value>Intercept adjustment (keep current slope)</value>
+  </data>
+  <data name="SlopeIntercept_RecommendationVsSelected_InsignificantSlopeAndIntercept" xml:space="preserve">
+    <value>Slope and intercept adjustment</value>
+  </data>
+  <data name="SlopeIntercept_RecommendationVsSelected_InterceptOnlyKeepSlope" xml:space="preserve">
+    <value>Intercept adjustment (keep current slope)</value>
+  </data>
+  <data name="SlopeIntercept_RecommendationVsSelected_KeepCurrent" xml:space="preserve">
+    <value>Keep current adjustment</value>
+  </data>
+  <data name="SlopeIntercept_RecommendationVsSelected_KeepCurrentAsRecommended" xml:space="preserve">
+    <value>Keep current adjustment as recommended</value>
+  </data>
+  <data name="SlopeIntercept_RecommendationVsSelected_ManualSlopeInterceptAdjustment" xml:space="preserve">
+    <value>Manual slope/intercept adjustment</value>
+  </data>
+  <data name="SlopeIntercept_RecommendationVsSelected_SignificantInterceptOnlyKeepSlopeAsRecommended" xml:space="preserve">
+    <value>Intercept adjustment (keep current slope) as recommended</value>
+  </data>
+  <data name="SlopeIntercept_RecommendationVsSelected_SignificantSlopeAndInterceptAsRecommended" xml:space="preserve">
+    <value>Slope and intercept adjustment as recommended</value>
+  </data>
+  <data name="SlopeIntercept_CurrentAdjustment_NeverAdjusted" xml:space="preserve">
+    <value>The product parameter(s) have never been adjusted</value>
+  </data>
+  <data name="SlopeIntercept_CurrentAdjustment_RecommendationAndSelectedDiffers" xml:space="preserve">
+    <value>Recommendation and selected adjustment type differs between products</value>
+  </data>
+  <data name="SlopeIntercept_CurrentAdjustment_RecommendationDiffers" xml:space="preserve">
+    <value>Recommendation differs between products</value>
+  </data>
+  <data name="SlopeIntercept_CurrentAdjustment_SelectedDiffers" xml:space="preserve">
+    <value>Selected adjustment type differs between products</value>
+  </data>
+  <data name="SlopeIntercept_CalculationSummaryMessage_InterceptDiffers" xml:space="preserve">
+    <value>The current intercept differs between the selected product parameters and is reset to 0 ahead of the proposed adjustments</value>
+  </data>
+  <data name="SlopeIntercept_CalculationSummaryMessage_SlopeAndInterceptDiffers" xml:space="preserve">
+    <value>The current slope and intercept differs between the selected product parameters and are reset to 1 and 0 ahead of the proposed adjustments</value>
+  </data>
+  <data name="SlopeIntercept_CalculationSummaryMessage_SlopeDiffers" xml:space="preserve">
+    <value>The current slope differs between the selected product parameters and is reset to 1 ahead of the proposed adjustments</value>
+  </data>
+  <data name="SlopeIntercept_CalculationSummaryMessage_ParameterRangeTooNarrow" xml:space="preserve">
+    <value>The parameter range is narrow</value>
+  </data>
+  <data name="SlopeIntercept_CalculationSummaryMessage_NoRecommendationOnAdjustmentsAllManual" xml:space="preserve">
+    <value>None (direct manual adjustment)</value>
+  </data>
+  <data name="CleanWithSampleUnderPipetteHeader" xml:space="preserve">
+    <value>Sample detected under pipette</value>
+  </data>
+  <data name="CleanWithSampleUnderPipetteMessage" xml:space="preserve">
+    <value>Clean cannot be started, as the sample under the pipette will be contaminated.
+Press continue when the sample has been removed or if the detection was wrong due to a dirty pipette.
+Press cancel to cancel the clean.</value>
+  </data>
+  <data name="Button_Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="Button_DoNotSave" xml:space="preserve">
+    <value>Do Not Save</value>
+  </data>
+  <data name="Button_Postpone" xml:space="preserve">
+    <value>Postpone</value>
+  </data>
+  <data name="Button_No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Button_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Button_Timeout" xml:space="preserve">
+    <value>Timeout</value>
+  </data>
+  <data name="Button_Dismiss" xml:space="preserve">
+    <value>Dismiss</value>
+  </data>
+  <data name="Button_Retry" xml:space="preserve">
+    <value>Retry</value>
+  </data>
+  <data name="Button_Start" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="Button_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Button_Continue" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="SettingsWereChangedOutsideNovaHeader" xml:space="preserve">
+    <value>Settings were modified by another application.</value>
+  </data>
+  <data name="SettingsWereChangedOutsideNovaMessage" xml:space="preserve">
+    <value>Newer version of settings was loaded. Please inspect the changes and redo the changes if needed.</value>
+  </data>
+  <data name="LimsErrorForSampleParameter" xml:space="preserve">
+    <value>Invalid Data Exchange sample property. Please check the configuration "{0}".</value>
+  </data>
+  <data name="SlopeIntercept_CalculationSummaryMessage_MoreSamplesRequired" xml:space="preserve">
+    <value>Minimum {0} samples are required to give a valid adjustment recommendation</value>
+  </data>
+  <data name="NoSampleUnderPipetteHeader" xml:space="preserve">
+    <value>No sample under pipette</value>
+  </data>
+  <data name="NoSampleUnderPipetteMessage" xml:space="preserve">
+    <value>Place a sample under the pipette and start the measurement</value>
+  </data>
+</root>
