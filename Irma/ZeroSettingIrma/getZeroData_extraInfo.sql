@@ -2,17 +2,17 @@ Use		MilkoScanFT3;
 
 Declare @FromDate datetime = DateAdd(day, -5, GetDate());
 
-With XMLNAMESPACES (default 'http://foss.dk/Nova/ExtraZeroData') 
+With XMLNAMESPACES (default 'http://foss.dk/Nova/ExtraZeroData')
 
 Select		AnalysisEndUTC
 		,	SampleID
 		,	unp.ProductLogicalID
 		,	ShortName as ParameterName
 		,	Result
-		,	IIF(ShortName = 'IntensCorr' or ShortName = 'CondCorr', Null, Limits.UpperLimit) as UpperLimit
-		,	IIF(ShortName = 'IntensCorr' or ShortName = 'CondCorr', Null, Limits.UpperLimit * 2) as MaxGraph --Used to set the max value on the graph to get a fixed scale
-		,	IIF(ShortName = 'IntensCorr' or ShortName = 'CondCorr', Null, Limits.LowerLimit) as LowerLimit
-		,	IIF(ShortName = 'IntensCorr' or ShortName = 'CondCorr', Null, Limits.LowerLimit *2) as MinGraph
+		,	IIF(ShortName = 'Intensity Correction' or ShortName = 'Conductivity Correction', Null, Limits.UpperLimit) as UpperLimit
+		,	IIF(ShortName = 'Intensity Correction' or ShortName = 'Conductivity Correction', Null, Limits.UpperLimit * 2) as MaxGraph --Used to set the max value on the graph to get a fixed scale
+		,	IIF(ShortName = 'Intensity Correction' or ShortName = 'Conductivity Correction', Null, Limits.LowerLimit) as LowerLimit
+		,	IIF(ShortName = 'Intensity Correction' or ShortName = 'Conductivity Correction', Null, Limits.LowerLimit *2) as MinGraph
 From
 (
 	Select		AnalysisEndUTC
@@ -21,19 +21,19 @@ From
 			,	Zero1
 			,	Zero2
 			,	Zero3
-			,	IntensCorr
-			,	CondCorr
+			,	IntensCorr as "Intensity Correction"
+			,	CondCorr as "Conductivity Correction"
 		--	,	*
 	From
 		(--	Get the Intensity correction and Conductivity correction from the rawdata table where they are saved as Extra_Zero_Data type as XML
 			Select			Cast(Cast(Cast(ra.Data as xml).query('data(//ExtraZeroData//IntensityCorrection)') as nvarchar) as float) as IntensCorr
-						,	Cast(Cast(Cast(ra.Data as xml).query('data(//ExtraZeroData//ConductivityCorrection)') as nvarchar) as float) as CondCorr
+						,	Cast(Cast(Cast(ra.Data as xml).query('data(//ExtraZeroData//ConductivityCorrection//Factor)') as nvarchar) as float) as CondCorr
 						,	ra.SubSampleID
 			From			tblMfCdRawData ra
 			Where			ra.Identification = 'EXTRA_ZERO_DATA'
 		) as ex
 	Inner Join
-		(
+		(-- Then join them with the predicted values for the Zero 1 - 3 parameters
 			Select		*
 			From
 			(
@@ -56,7 +56,7 @@ From
 				and			pa.Obsolete = 0
 				and			pv.Type = 0 -- Main result
 				and			sa.AnalysisEndUTC > @FromDate
-				and			sa.InstrumentLogicalID = {?@InstrumentLogicalID}
+				and			sa.InstrumentLogicalID = 1--{?@InstrumentLogicalID}
 			) as s
 				Pivot
 			(
@@ -68,10 +68,10 @@ From
 ) as piv
 Unpivot
 (
-	Result for ShortName In (Zero1, Zero2, zero3, IntensCorr, CondCorr)
+	Result for ShortName In (Zero1, Zero2, Zero3, "Intensity Correction", "Conductivity Correction")
 ) as unp
 Inner Join
-( -- Finally get the prodict limits.
+( -- Finally get the prodict limits. Assuming that for the zero product the limits are the same for all 3 zero parameters.
 	Select		pro.ProductLogicalID
 			,	max(prlv.Value) as UpperLimit
 			,	min(prlv.Value) as LowerLimit
