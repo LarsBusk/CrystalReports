@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="..\..\..\..\DataConverter\Xslt\ReportDefinitions.xslt"?>
+<ReportDefinition
+    Name="Instrument Check-sample list"
+    Type="Sample List"
+    Description="Shows instrument check-samples from selected definitions."
+    xmlns="http://foss.dk/Mosaic/Metadata/ReportDefinitionTypes"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://foss.dk/Mosaic/Metadata/ReportDefinitionTypes ..\..\..\..\DataConverter\Xsd\ReportDefinitions.xsd">
+
+  <Report
+    FileName="InstrumentCheckSampleList.rpt"
+    Version="1"
+    FileType="0"/>
+
+  <InstrumentTypes>
+    <!-- MilkoScan FT3 -->
+    <InstrumentType TypeID="12309"/>
+  </InstrumentTypes>
+</ReportDefinition>

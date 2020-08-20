@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="..\..\..\..\DataConverter\Xslt\ReportDefinitions.xslt"?>
+<ReportDefinition
+    Name="Untargeted Model Adjustment"
+    Type="Sample List"
+    Description="This report shows data for adjusting untargeted good product models."
+    xmlns="http://foss.dk/Mosaic/Metadata/ReportDefinitionTypes"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://foss.dk/Mosaic/Metadata/ReportDefinitionTypes ..\..\..\..\DataConverter\Xsd\ReportDefinitions.xsd">
+
+  <Report
+    FileName="UntargetedModelAdjustment.rpt"
+    Version="1"
+    FileType="0"/>
+
+  <InstrumentTypes>
+    <!-- MilkoScan FT3 -->
+    <InstrumentType TypeID="12309"/>
+  </InstrumentTypes>
+</ReportDefinition>

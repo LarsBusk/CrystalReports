@@ -6,11 +6,11 @@ Select			pg.Name							ProductGroupName
 			,	pg.ProductGroupID				ProductGroupID
 			,	sihist.AppliedSlope				Slope
 			,	sihist.AppliedIntercept			Intercept
-			,	sihist.CalculatedAdjustmentType	CalculatedAdjustmentType
+			,	IsNull(sihist.CalculatedAdjustmentType, -1)	CalculatedAdjustmentType
 			,	sihist.AppliedAdjustmentType	AppliedAdjustmentType
 			,	sihist.ModifiedAtUTC			ModifiedAtUTC
 			,	sihist.AcceptedAtUTC			AcceptedAtUTC
-			,	sihist.SampleSetID				SampleSetID
+			,	Isnull(sihist.SampleSetID, -1)	SampleSetID
 			,	sihist.InstrumentLogicalID		InstrumentLogicalID
 --			,	*
 From			hist.tblMfCdSlopeInterceptAdjustmentHistory sihist
@@ -25,4 +25,5 @@ Left Join		tblMfCdProductGroup pg
 Where			pa.Obsolete = 0		
 	and			pro.Obsolete = 0
 	and			sihist.AcceptedAtUTC > DATEADD(YEAR, -1, GETDATE())
-	and			sihist.InstrumentLogicalID = 1 --{?InstrumentLogicalID}
+	and			sihist.InstrumentLogicalID = 1--{?InstrumentLogicalID}
+Order by ProductName, ModifiedAtUTC
