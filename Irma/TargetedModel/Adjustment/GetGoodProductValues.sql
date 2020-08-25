@@ -204,6 +204,7 @@ Select		AnalysisTime
 		,	InstrumentLogicalID
 		,	NumberOfDecimals
 		,	PERCENTILE_DISC(0.5) Within Group (Order By Result) Over (Partition By ParameterLogicalID) as Median
+		,	PERCENTILE_DISC(0.5) Within Group (Order By Result_NoSi) Over (Partition By ParameterLogicalID) as Median_NoSi
 		,	StdDev
 		,	Cnt
 		,	GoodProductLimit
@@ -217,7 +218,8 @@ Select		AnalysisTime
 		,	ParameterName 
 		,	ProductName
 		,	v.ProductLogicalID
-		,	(Result - Intercept) / Slope as Result
+		,	((Result - Intercept) / Slope) * CurrentSlope + CurrentIntercept as Result
+		,	(Result - Intercept) / Slope as Result_NoSi
 		,	SampleID 
 		,	v.ParameterLogicalID
 		,	InstrumentLogicalID
