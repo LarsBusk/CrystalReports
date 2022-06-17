@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="D:\Projects\P4\Mosaic\Mainline\Foundation\DataManagement\DataConverter\Xslt\ReportDefinitions.xslt"?>
+<!-- edited with Notepad++ by Lars Busk(FOSS Analytical A/S) -->
+<ReportDefinition Name="Instrument Slope/Intercept history" Type="Custom" Description="Shows the Slope and Intercept history of the instrument" xmlns="http://foss.dk/Mosaic/Metadata/ReportDefinitionTypes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://foss.dk/Mosaic/Metadata/ReportDefinitionTypes C:\Projects\P4\Mosaic\Mainline\Foundation\DataManagement\DataConverter\Xsd\ReportDefinitions.xsd">
+	<Report FileName="InstrumentSiHistoryFiltered.rpt" Version="1" FileType="0"/>
+	<ParameterView UseParameterView="0" Description="This view is a specific view for this report. Used for entering values for parameters when running this report."  WindowSpec="SampleReportView.xml" ClassName="Foss.Mosaic.Foundation.GuiFramework.ReportInteractionControllers.SampleReportView"  ModuleDLL="Foss.Mosaic.Foundation.GuiFramework.ReportInteractionControllers.dll"/>
+</ReportDefinition>
+
