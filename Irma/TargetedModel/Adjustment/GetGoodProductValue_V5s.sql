@@ -29,32 +29,6 @@ Use		MilkoScanFT3;
 	,	Cnt int
  )	
 
- Create Table #Instrument
- (
-		InstrumentName nvarchar(50)	
-	,	InstrumentGroupName nvarchar(50)
-	,	NetworkName nvarchar(50)
-	,	SerialNumber nvarchar(50)	
-	,	InstrumentLogicalId int
- )
-
- --Insert instrument information for the report header.
- Insert Into #Instrument
-
- Select		ins.Name as InstrumentName
-		,	ig.Name as InstrumentGroupName
-		,	net.Name as NetworkName
-		,	ins.SerialNumber 
-		,	ins.InstrumentLogicalID
-
-From		tblMfCdInstrument ins
-Inner Join	tblMfCdInstrumentGroup ig
-	on		ig.InstrumentGroupLogicalID = ins.InstrumentGroupLogicalID
-Inner Join	tblMfCdNetwork net
-	on		net.NetworkID = ig.NetworkID
-Where		ins.Obsolete = 0
-	and		ig.Obsolete = 0
-
 
  --Insert the current values of the Good Product detection limits
  Insert Into #Settings
@@ -230,7 +204,6 @@ Select		AnalysisTime
 		,	InstrumentLogicalID
 		,	NumberOfDecimals
 		,	PERCENTILE_DISC(0.5) Within Group (Order By Result) Over (Partition By ParameterLogicalID) as Median
-		,	PERCENTILE_DISC(0.5) Within Group (Order By Result_NoSi) Over (Partition By ParameterLogicalID) as Median_NoSi
 		,	StdDev
 		,	Cnt
 		,	GoodProductLimit
@@ -238,22 +211,16 @@ Select		AnalysisTime
 		,	Intercept
 		,	CurrentIntercept
 		,	CurrentSlope
-		,	InstrumentName
-		,	InstrumentGroupName
-		,	NetworkName
-		,	SerialNumber
-		
 From
 (
 Select		AnalysisTime 
 		,	ParameterName 
 		,	ProductName
 		,	v.ProductLogicalID
-		,	((Result - Intercept) / Slope) * CurrentSlope + CurrentIntercept as Result
-		,	(Result - Intercept) / Slope as Result_NoSi
+		,	(Result - Intercept) / Slope as Result
 		,	SampleID 
 		,	v.ParameterLogicalID
-		,	i.InstrumentLogicalID
+		,	InstrumentLogicalID
 		,	NumberOfDecimals
 		,	StdDev
 		,	Cnt
@@ -262,20 +229,12 @@ Select		AnalysisTime
 		,	Slope
 		,	CurrentIntercept
 		,	CurrentSlope
-		,	InstrumentName
-		,	InstrumentGroupName
-		,	NetworkName
-		,	SerialNumber
-
 From		#Values v
 Inner Join	#Settings s
 	on		s.ParameterLogicalID = v.ParameterLogicalID
 	and		s.AuditTrailId = v.AuditTrailID
-Right Join	#Instrument i
-	on		i.InstrumentLogicalId = v.InstrumentLogicalID
 ) as res
 Order By ParameterLogicalID, AnalysisTime
 
 Drop Table #Settings
 Drop Table #Values
-Drop Table #Instrument
