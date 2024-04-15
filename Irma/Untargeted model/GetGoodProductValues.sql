@@ -1,4 +1,4 @@
-Use		MilkoScanFT3;
+--Use		MilkoScanFT3;
 
 
  Create table #Settings 
@@ -18,6 +18,7 @@ Use		MilkoScanFT3;
 	,	PredictionModelName nvarchar(50)
 	,	Result float
 	,	SampleID nvarchar(50)
+	,	RealSampleId int
 	,	ParameterLogicalID int
 	,	ProductLogicalID int
 	,	InstrumentLogicalID int
@@ -96,6 +97,7 @@ Insert Into #Values
 			,	pm.[Name] as PredictionModelName
 			,	pv.DoubleResult as Result
 			,	sa.SampleNumber
+			,	sa.SampleID
 			,	pa.ParameterLogicalID
 			,	sa.ProductLogicalID
 			,	sa.InstrumentLogicalID
@@ -129,6 +131,8 @@ Select		AnalysisTime
 		,	ProductLogicalID
 		,	Result
 		,	SampleID 
+		,	ROW_NUMBER() Over (Partition By ProductLogicalID, ParameterLogicalID Order By RealSampleId) as RowNumber
+		,	RealSampleId
 		,	ParameterLogicalID
 		,	InstrumentLogicalID
 		,	NumberOfDecimals
@@ -148,6 +152,7 @@ Select		AnalysisTime
 		,	v.ProductLogicalID
 		,	Result
 		,	SampleID 
+		,	RealSampleId
 		,	v.ParameterLogicalID
 		,	InstrumentLogicalID
 		,	NumberOfDecimals
@@ -160,7 +165,7 @@ Inner Join	#Settings s
 	on		s.ParameterLogicalID = v.ParameterLogicalID
 	and		s.AuditTrailId = v.AuditTrailID
 ) as res
-Order By ParameterLogicalID, AnalysisTime
+Order By ParameterLogicalID, RealSampleId
 
 Drop Table #Settings
 Drop Table #Values

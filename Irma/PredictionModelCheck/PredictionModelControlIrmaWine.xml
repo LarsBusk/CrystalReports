@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="D:\Projects\P4\Mosaic\Mainline\Foundation\DataManagement\DataConverter\Xslt\ReportDefinitions.xslt"?>
+<!-- Edited with Notepad++ by Lars Busk -->
+<ReportDefinition
+  Name="Prediction Model check"
+  Type="Sample List"
+  IsNovaDefault="1"
+  Description="This report shows calibration control samples with limits for each product"
+  xmlns="http://foss.dk/Mosaic/Metadata/ReportDefinitionTypes"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://foss.dk/Mosaic/Metadata/ReportDefinitionTypes C:\Projects\P4\Mosaic\Mainline\Foundation\DataManagement\DataConverter\Xsd\ReportDefinitions.xsd">
+
+  <Report
+    FileName="PredictionModelControlIrmaWine.rpt"
+    Version="1"
+    FileType="0"/>
+
+  <InstrumentTypes>
+    <!-- WineScan 3 -->
+    <InstrumentType TypeID="12310"/>
+  </InstrumentTypes>
+</ReportDefinition>
+
